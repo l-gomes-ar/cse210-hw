@@ -45,7 +45,7 @@ class Program
 
             if (!scripture.IsCompletelyHidden())
             {
-                scripture.HideRandomWords(1);
+                scripture.HideRandomWords(3);
             }
             else
             {

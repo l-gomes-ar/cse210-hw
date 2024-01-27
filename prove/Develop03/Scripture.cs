@@ -25,7 +25,7 @@ public class Scripture
             do 
             {
                 index = randInt.Next(_words.Count);
-            } while (_words[index].isHidden());
+            } while (_words[index].isHidden() && !IsCompletelyHidden());
 
             _words[index].Hide();
         }
