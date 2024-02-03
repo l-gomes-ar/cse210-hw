@@ -7,20 +7,14 @@ public class ListingActivity : Activity
     {
         SetName("Listing");
         SetDescription("This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
-
-        _prompts.Add("Who are people that you appreciate?");
-        _prompts.Add("What are personal strengths of yours?");
-        _prompts.Add("Who are people that you have helped this week?");
-        _prompts.Add("When have you felt the Holy Ghost this month?");
-        _prompts.Add("Who are some of your personal heroes?");
-
+        AddPrompts();
         _count = 0;
     }
 
     public void Run() 
     {
         DisplayStartingMessage();
-        
+
         Console.WriteLine("List as many responses you can to the following prompt: ");
         Console.WriteLine($" --- {GetRandomPrompt()} ---");
 
@@ -37,10 +31,19 @@ public class ListingActivity : Activity
 
     public string GetRandomPrompt()
     {
+        // Check we still have prompts, add all of them otherwise
+        if (_prompts.Count == 0)
+        {
+            AddPrompts();
+        }
+
+        // Get random int for index, get prompt from list, remove prompt from list
         Random random = new Random();
         int randIndex = random.Next(0, _prompts.Count);
+        string prompt = _prompts[randIndex];
+        _prompts.RemoveAt(randIndex);
 
-        return _prompts[randIndex];
+        return prompt;
     }
 
     public List<string> GetListFromUser()
@@ -58,5 +61,14 @@ public class ListingActivity : Activity
         }
 
         return items;
+    }
+
+    private void AddPrompts()
+    {
+        _prompts.Add("Who are people that you appreciate?");
+        _prompts.Add("What are personal strengths of yours?");
+        _prompts.Add("Who are people that you have helped this week?");
+        _prompts.Add("When have you felt the Holy Ghost this month?");
+        _prompts.Add("Who are some of your personal heroes?");
     }
 }

@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
+        BreathingActivity activity1 = new BreathingActivity();
+        ReflectingActivity activity2 = new ReflectingActivity();
+        ListingActivity activity3 = new ListingActivity();
+
         int option = 0;
         while (option != 4)
         {
@@ -27,15 +31,12 @@ class Program
             switch (option) 
             {
                 case 1:
-                    BreathingActivity activity1 = new BreathingActivity();
                     activity1.Run();
                     break;
                 case 2:
-                    ReflectingActivity activity2 = new ReflectingActivity();
                     activity2.Run();
                     break;
                 case 3:
-                    ListingActivity activity3 = new ListingActivity();
                     activity3.Run();
                     break;
                 default:

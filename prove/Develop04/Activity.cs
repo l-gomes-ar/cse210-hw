@@ -33,7 +33,7 @@ public class Activity
         Console.WriteLine($"Welcome to the {_name} Activity\n");
         Console.WriteLine($"{_description}\n");
 
-        while (_duration == 0)
+        do
         {
             Console.Write("How long, in seconds, would you like for your session? ");
             string duration = Console.ReadLine();
@@ -46,6 +46,7 @@ public class Activity
                 Console.WriteLine("Time not valid!");
             }
         }
+        while (_duration == 0);
 
         Console.Clear();
         Console.WriteLine("Get ready...");
