@@ -8,7 +8,7 @@ class Program
         Lecture lecture = new Lecture
         (
             "Exploring the Cosmos: A Journey Through Space and Time",
-            "Join us for an enlightening evening as Dr. Emily Thompson,\nrenowned astrophysicist takes us on a captivating journey through the cosmos.\nDiscover the wonders of the universe, from distant galaxies\nto elusive black holes, and unravel the mysteries of space and time.",
+            "Discover the wonders of the universe, from distant galaxies to elusive black holes, and unravel the mysteries of space and time.",
             "March 10, 2024",
             "7:00 PM - 9:00 PM",
             "Dr. Emily Thompson",
@@ -19,7 +19,7 @@ class Program
         Reception reception = new Reception
         (
             "Artisanal Delights: A Taste of Local Flavors",
-            "Indulge your senses in an evening of culinary delight featuring \nan array of artisanal creations crafted by local chefs. Savor exquisite\nflavors, mingle with fellow food enthusiasts, and immerse\nyourself in a celebration of gastronomy.",
+            "Indulge your senses in an evening of culinary delight featuring an array of artisanal creations crafted by local chefs.",
             "April 5, 2024",
             "6:30 PM - 8:30 PM",
             "rsvp@localflavors.com"
@@ -29,39 +29,43 @@ class Program
         Outdoor outdoor = new Outdoor
         (
             "Spring Fling Picnic: Embracing Nature's Beauty",
-            "Join us for a delightful afternoon amidst nature's splendor as \nwe celebrate the arrival of spring. Bring your blankets and baskets for\na relaxed picnic in the park, surrounded by blooming flowers,\nchirping birds, and the gentle warmth of the sun.",
+            "Join us for a delightful afternoon amidst nature's splendor as we celebrate the arrival of spring.",
             "May 15, 2024",
             "12:00 PM - 3:00 PM",
             "The weather forecast predicts a sunny day with a high of 70°F (21°C) and gentle breezes."
         );
         outdoor.AddAddress("Picnic Area A, 789 Nature Trail", "Greenfield", "England", "United Kingdom");
 
-        // For each event call each of the marketing messages
-        List<Event> events = new List<Event>
-        {
-            lecture, reception, outdoor
-        };
+        // For each event call each of the marketing messages:
+        
+        // Lecture
+        Console.WriteLine("\nStandard Details:\n");
+        lecture.DisplayStandardDetails();
 
-        Console.Clear();
-        Console.WriteLine("Standard Details:\n");
-        foreach (Event ev in events)
-        {
-            ev.DisplayStandardDetails();
-            Console.WriteLine();
-        }
+        Console.WriteLine("\nFull Details:\n");
+        lecture.DisplayFullDetails();
 
-        Console.WriteLine("Full Details:\n");
-        foreach (Event ev in events)
-        {
-            ev.DisplayFullDetails();
-            Console.WriteLine();
-        }
+        Console.WriteLine("\nShort Description:\n");
+        lecture.DisplayShortDescription();
 
-        Console.WriteLine("Short Description:\n");
-        foreach (Event ev in events)
-        {
-            ev.DisplayShortDescription();
-            Console.WriteLine();
-        }
+        // Reception
+        Console.WriteLine("\nStandard Details:\n");
+        reception.DisplayStandardDetails();
+
+        Console.WriteLine("\nFull Details:\n");
+        reception.DisplayFullDetails();
+
+        Console.WriteLine("\nShort Description:\n");
+        reception.DisplayShortDescription();
+
+        // Outdoor Gathering
+        Console.WriteLine("\nStandard Details:\n");
+        outdoor.DisplayStandardDetails();
+
+        Console.WriteLine("\nFull Details:\n");
+        outdoor.DisplayFullDetails();
+
+        Console.WriteLine("\nShort Description:\n");
+        outdoor.DisplayShortDescription();
     }
 }

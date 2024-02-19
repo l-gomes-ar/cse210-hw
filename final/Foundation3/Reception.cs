@@ -10,8 +10,8 @@ public class Reception : Event
     public override void DisplayFullDetails()
     {
         DisplayStandardDetails();
-        Console.WriteLine($"Type of Event:\n  {GetTypeEvent()}\n");
-        Console.WriteLine($"Email for RSVP:\n  {_email}\n");
+        Console.WriteLine($"Type of Event: {GetTypeEvent()}");
+        Console.WriteLine($"Email for RSVP: {_email}");
     }
 
     protected override string GetTypeEvent()

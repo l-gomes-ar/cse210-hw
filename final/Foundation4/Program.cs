@@ -4,9 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Running running = new Running(2022, 11, 03, 30, 3.0);
-        Cycling cycling = new Cycling(2023, 11, 08, 90, 20);
-        Swimming swimming = new Swimming(2023, 11, 09, 45, 72);
+        Running running = new Running(2023, 10, 03, 60, 5);
+        Cycling cycling = new Cycling(2023, 11, 08, 80, 15);
+        Swimming swimming = new Swimming(2023, 12, 09, 45, 60);
 
         List<Activity> activities = new List<Activity>
         {

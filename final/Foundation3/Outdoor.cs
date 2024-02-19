@@ -10,8 +10,8 @@ public class Outdoor : Event
     public override void DisplayFullDetails()
     {
         DisplayStandardDetails();
-        Console.WriteLine($"Type of Event:\n  {GetTypeEvent()}\n");
-        Console.WriteLine($"Weather Info:\n  {_weatherInfo}\n");
+        Console.WriteLine($"Type of Event: {GetTypeEvent()}");
+        Console.WriteLine($"Weather Info: {_weatherInfo}");
     }
 
     protected override string GetTypeEvent()

@@ -27,18 +27,20 @@ class Program
         order2.AddProduct(headphones);
 
         // Display packing label, shipping label, and the total price
-        Console.WriteLine("Order 1:");
+        Console.WriteLine("Order 1:\n");
         Console.WriteLine("Packing Label:");
         Console.WriteLine($"{order1.GetPackingLabel()}");
         Console.WriteLine($"Shipping Label:");
         Console.WriteLine($"{order1.GetShippingLabel()}\n");
-        Console.WriteLine($"Total Price: ${order1.CalculateTotalCost()}\n");
+        Console.WriteLine($"Total Price:");
+        Console.WriteLine($"{order1.CalculateTotalCost()}\n");
 
-        Console.WriteLine("Order 2:");
+        Console.WriteLine("Order 2:\n");
         Console.WriteLine("Packing Label:");
         Console.WriteLine($"{order2.GetPackingLabel()}");
         Console.WriteLine($"Shipping Label:");
         Console.WriteLine($"{order2.GetShippingLabel()}\n");
-        Console.WriteLine($"Total Price: ${order2.CalculateTotalCost()}");
+        Console.WriteLine($"Total Price:");
+        Console.WriteLine($"{order2.CalculateTotalCost()}");
     }
 }

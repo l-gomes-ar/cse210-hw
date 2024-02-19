@@ -21,18 +21,18 @@ public abstract class Event
 
     public void DisplayStandardDetails()
     {
-       Console.WriteLine($"Title:\n  {_title}\n");
-       Console.WriteLine($"Description:\n  {_description}\n");
-       Console.WriteLine($"Date:\n  {_date}\n");
-       Console.WriteLine($"Time:\n  {_time}\n");
-       Console.WriteLine($"Address:\n{_address.GetAddress()}\n");
+       Console.WriteLine($"Title: {_title}");
+       Console.WriteLine($"Description: {_description}");
+       Console.WriteLine($"Date: {_date}");
+       Console.WriteLine($"Time: {_time}");
+       Console.WriteLine($"Address: {_address.GetAddress()}");
     }
 
     public void DisplayShortDescription()
     {
-        Console.WriteLine($"Type of Event:\n  {GetTypeEvent()}\n");
-        Console.WriteLine($"Title:\n  {_title}\n");
-        Console.WriteLine($"Date:\n  {_date}\n");
+        Console.WriteLine($"Type of Event: {GetTypeEvent()}");
+        Console.WriteLine($"Title: {_title}");
+        Console.WriteLine($"Date: {_date}");
     }
 
     public abstract void DisplayFullDetails();
