@@ -33,7 +33,7 @@ class Program
         Console.WriteLine($"Shipping Label:");
         Console.WriteLine($"{order1.GetShippingLabel()}\n");
         Console.WriteLine($"Total Price:");
-        Console.WriteLine($"{order1.CalculateTotalCost()}\n");
+        Console.WriteLine($"${order1.CalculateTotalCost()}\n");
 
         Console.WriteLine("Order 2:\n");
         Console.WriteLine("Packing Label:");
@@ -41,6 +41,6 @@ class Program
         Console.WriteLine($"Shipping Label:");
         Console.WriteLine($"{order2.GetShippingLabel()}\n");
         Console.WriteLine($"Total Price:");
-        Console.WriteLine($"{order2.CalculateTotalCost()}");
+        Console.WriteLine($"${order2.CalculateTotalCost()}");
     }
 }
